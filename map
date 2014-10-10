@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8aiO3t8FpzFJagEmeM_XwZRAIGUuWHUU">
+    </script>
+    <script type="text/javascript">
+
+      function initialize() {
+	var myLatlng = new google.maps.LatLng(41.9086, -71.425);
+        	var mapOptions = {center: myLatlng, zoom: 17, mapTypeId: google.maps.MapTypeId.SATELLITE};
+        	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+	
+	var marker 
+
+var arrayPlaces = [];
+var contentStrings= []
+
+var image = 'image.gif'
+
+arrayPlaces.push(new google.maps.Marker({position: new google.maps.LatLng(41.908903, -71.426257), title: "Drum Circle", icon: image}));
+contentStrings.push('<div id="content"><h1 id="firstHeading" class="firstHeading">Drum Circle</h1><div id="siteNotice"></div><div 
+
+id="bodyContent">Hello</div></div>');
+google.maps.event.addListener(arrayPlaces[0], 'click', function() {new google.maps.InfoWindow({content: contentStrings[0]}).open(map,arrayPlaces[0]); });
+
+arrayPlaces.push(new google.maps.Marker({position: new google.maps.LatLng(41.909095, -71.425832), title: "Bathroom"}));
+contentStrings.push('<div id="content"><h1 id="firstHeading" class="firstHeading">Bathroom</h1><div id="siteNotice"></div><div 
+
+id="bodyContent">Hello</div></div>');
+google.maps.event.addListener(arrayPlaces[1], 'click', function() {new google.maps.InfoWindow({content: contentStrings[1]}).open(map,arrayPlaces[1]); });
+
+arrayPlaces.push(new google.maps.Marker({position: new google.maps.LatLng(41.909025, -71.426624), title: "Kids Painting"}));
+contentStrings.push('<div id="content"><h1 id="firstHeading" class="firstHeading">Kids Painting</h1><div id="siteNotice"></div><div 
+
+id="bodyContent">Hello</div></div>');
+google.maps.event.addListener(arrayPlaces[2], 'click', function() {new google.maps.InfoWindow({content: contentStrings[2]}).open(map,arrayPlaces[2]); });
+
+arrayPlaces.push(new google.maps.Marker({position: new google.maps.LatLng(41.90919,-71.42619), title: "Gallery of the Trees/Competition"}));
+contentStrings.push('<div id="content"><h1 id="firstHeading" class="firstHeading">Gallery of the Trees/Competition</h1><div id="siteNotice"></div><div 
+
+id="bodyContent">Hello</div></div>');
+google.maps.event.addListener(arrayPlaces[3], 'click', function() {new google.maps.InfoWindow({content: contentStrings[3]}).open(map,arrayPlaces[3]); });
+
+arrayPlaces.push(new google.maps.Marker({position: new google.maps.LatLng(41.909204, -71.4255902), title: "Food"}));
+contentStrings.push('<div id="content"><h1 id="firstHeading" class="firstHeading">Food Truck</h1><div id="siteNotice"></div><div 
+
+id="bodyContent">Hello</div></div>');
+google.maps.event.addListener(arrayPlaces[4], 'click', function() {new google.maps.InfoWindow({content: contentStrings[4]}).open(map,arrayPlaces[4]); });
+
+arrayPlaces.push(new google.maps.Marker({position: new google.maps.LatLng(41.908499, -71.425554), title: "Main Stage"}));
+contentStrings.push('<div id="content"><h1 id="firstHeading" class="firstHeading">Main Stage</h1><div id="siteNotice"></div><div 
+
+id="bodyContent">Hello</div></div>');
+google.maps.event.addListener(arrayPlaces[5], 'click', function() {new google.maps.InfoWindow({content: contentStrings[5]}).open(map,arrayPlaces[5]); });
+
+arrayPlaces.push(new google.maps.Marker({position: new google.maps.LatLng(41.908051, -71.425592), title: "Welcome Booth"}));
+contentStrings.push('<div id="content"><h1 id="firstHeading" class="firstHeading">Welcome Booth</h1><div id="siteNotice"></div><div 
+
+id="bodyContent">Hello</div></div>');
+google.maps.event.addListener(arrayPlaces[6], 'click', function() {new google.maps.InfoWindow({content: contentStrings[6]}).open(map,arrayPlaces[6]); });
+
+arrayPlaces.push(new google.maps.Marker({position: new google.maps.LatLng(41.908759, -71.424961), title: "Natural Ampitheater"}));
+contentStrings.push('<div id="content"><h1 id="firstHeading" class="firstHeading">Natural Ampitheater</h1><div id="siteNotice"></div><div 
+
+id="bodyContent">Hello</div></div>');
+google.maps.event.addListener(arrayPlaces[7], 'click', function() {new google.maps.InfoWindow({content: contentStrings[7]}).open(map,arrayPlaces[7]); });
+
+arrayPlaces.push(new google.maps.Marker({position: new google.maps.LatLng(41.906799, -71.426147), title: "Parking"}));
+contentStrings.push('<div id="content"><h1 id="firstHeading" class="firstHeading">Parking</h1><div id="siteNotice"></div><div 
+
+id="bodyContent">Hello</div></div>');
+google.maps.event.addListener(arrayPlaces[8], 'click', function() {new google.maps.InfoWindow({content: contentStrings[8]}).open(map,arrayPlaces[8]); });
+
+for (var i = 0; i < arrayPlaces.length; i++) {	
+	arrayPlaces[i].setMap(map);
+}
+
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+<div id="map-canvas"></div>
+  </body>
+</html>
